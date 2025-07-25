@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { CommonModule } from '@angular/common';
+import { TodoStoreService } from './services/todo-store.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [TodoListComponent, CommonModule],
+  providers: [TodoStoreService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

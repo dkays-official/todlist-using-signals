@@ -1,0 +1,79 @@
+ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+  }
+  
+  li.completed {
+    background-color: #e0f7de;
+    text-decoration: line-through;
+    color: #777;
+  }
+  
+  li > span {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  li button {
+    background-color: #f44336; /* Red for remove */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: auto; /* Push the remove button to the right */
+  }
+  
+  li button:hover {
+    background-color: #d32f2f;
+  }
+  
+  li button + button { /* Style the complete/incomplete button */
+    background-color: #2196f3; /* Blue */
+    margin-left: 5px; /* Add spacing between buttons */
+  }
+  
+  li button + button:hover {
+    background-color: #1976d2;
+  }
+
+  h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-right: 10px;
+    width: 70%; /* Adjust width as needed */
+    box-sizing: border-box; /* Prevent padding from increasing width */
+  }
+  
+  button {
+    background-color: #4CAF50; /* Green add button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }

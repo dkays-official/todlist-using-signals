@@ -1,0 +1,19 @@
+<h1>My ToDo List</h1>
+
+<input type="text" [(ngModel)]='newTodoText' placeholder="Add a new task" (keyup.enter)="addTodo()" />
+
+<button (click)="addTodo()">Add</button>
+
+<ul>
+    @for (todo of todoStore.todos(); track $index) {
+      <li [ngClass]="{ 'completed': todo.completed }" key={todo.id}>
+        <span>{{ todo.text }}</span>
+        <button (click)="deleteTodo(todo)">Remove</button>
+        @if (!todo.completed) {
+          <button (click)="toggleComplete(todo)">Mark as completed</button>
+        } @else {
+          <button (click)="toggleComplete(todo)">Mark as Incomplete</button>
+        }
+      </li>
+    }
+  </ul>
